@@ -11,6 +11,7 @@ import java.util.StringTokenizer;
 // 좌표 압축
 /*
  * 값이 같을 떄 결과가 같으면 Map<Key, Value>을 떠올리자!
+ * 시간 복잡도 : NlogN (정렬이 NlogN 나머지는 N이므로)
  */
 public class Baekjoon_18870 {
 
@@ -25,7 +26,7 @@ public class Baekjoon_18870 {
 			arr[i] = Integer.parseInt(st.nextToken());
 		}
 		// 배열 정렬
-		int[] sortedArr = arr.clone();
+		int[] sortedArr = arr.clone();  // 배열 복사
 		Arrays.sort(sortedArr);
 		
 		int size = sortedArr.length;

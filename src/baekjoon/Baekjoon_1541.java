@@ -8,6 +8,7 @@ import java.util.StringTokenizer;
  * "-" 문자열을 기준으로 StringTokenizer를 이용하여 자른 후
  * 제일 첫 token만 양수이고
  * 나머지 token에서는 양수를 다 더하여 전체 합에서 빼면 최솟값이 나온다.
+ * 시간복잡도 : N (숫자 갯수에 비례하니까...?)
  */
 public class Baekjoon_1541 {
 
