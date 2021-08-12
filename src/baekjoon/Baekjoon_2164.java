@@ -1,6 +1,5 @@
 package baekjoon;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Baekjoon_2164 {
