@@ -11,7 +11,6 @@ import java.util.Queue;
 public class Baekjoon_1158 {
 	
 	public static void main(String[] args) throws IOException {
-		long start = System.currentTimeMillis();
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
 		String[] str = br.readLine().split(" ");
@@ -31,6 +30,5 @@ public class Baekjoon_1158 {
 		sb.setLength(sb.length()-2);
 		sb.append(">");
 		System.out.println(sb);
-		System.out.println(System.currentTimeMillis()-start+"ms");
 	}
 }
