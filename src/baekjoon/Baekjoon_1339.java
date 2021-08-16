@@ -16,6 +16,7 @@ public class Baekjoon_1339 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(br.readLine());
+		// 배열에 알파벳들의 계수를 저장
 		for(int i=0; i<N; i++) {
 			String str = br.readLine();
 			int size = str.length();
@@ -33,5 +34,4 @@ public class Baekjoon_1339 {
 		}
 		System.out.println(sum);
 	}
-	
 }

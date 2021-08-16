@@ -11,7 +11,7 @@ import java.util.Queue;
 /*
  * 여러개의 루트노드가 존재할 수 있음에 주의!
  * 각 노드마다 부모노드의 인덱스를 저장한 후
- * 부모노드(값을 -1 가진 인덱스)를 기점으로 시작하여
+ * 루트노드(값을 -1 가진 인덱스)를 기점으로 시작하여
  * 자신을 부모노드로 가지는 자식노드가 더 이상 없을 때까지 dfs로 탐색한다. 
  * 시간복잡도: O(N^2), 최악의 경우 검색할 때 1+2+...+N 이다. 하지만 N이 50이하이기 떄문에 크게 상관없다. 
  */
@@ -29,11 +29,11 @@ public class Baekjoon_1068 {
 		for(int i=0; i<N; i++) {
 			arr[i] = Integer.parseInt(str[i]);
 		}
-		int idx = Integer.parseInt(br.readLine());
+		int idx = Integer.parseInt(br.readLine()); // 자를 노드
 		arr[idx] = -2; // 트리에서 자르기 위해 해당 노드가 부모노드로 가리키는 값을 존재하지 않는 값(-2)로 변경
 		searchRoot();
 		while(!roots.isEmpty()) {
-			func(roots.poll());
+			calcLeaf(roots.poll()); // 루트노드 하나씩 꺼내서 리프노드 갯수 계산
 		}
 		System.out.println(leafCnt);
 		
@@ -45,12 +45,12 @@ public class Baekjoon_1068 {
 		}
 	}
 	
-	public static void func(int idx) { // 루트노드의 인덱스가 주어지면 리프노드의 갯수를 계산
+	public static void calcLeaf(int idx) { // 루트노드의 인덱스가 주어지면 리프노드의 갯수를 계산
 		boolean isLeaf = true; // 리프노드 유무
 		for(int i=0; i<N; i++) {
 			if(arr[i]==idx) { // 자신을 부모로 하는 자식노드 발견하면
 				isLeaf = false; // 리프노드가 아님
-				func(i);
+				calcLeaf(i);
 			}
 		}
 		if(isLeaf) leafCnt++; // 리프노드이면 갯수 증가

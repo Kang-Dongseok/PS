@@ -34,12 +34,12 @@ public class Baekjoon_5639 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String str = br.readLine(); // 첫 줄 읽어서
 		Node rootNode = new Node(Integer.parseInt(str)); // root 노드 생성
-		while(true) { // readLine은 값이 없으면 빈문자열을 반환하므로
+		while(true) {
 			str = br.readLine();
-			if(str == null || str.equals("")) break;
+			if(str == null || str.equals("")) break; // readLine은 값이 없으면 null 혹은빈문자열을 반환하므로
 			rootNode.add(Integer.parseInt(str));
 		}
-		postOrder(rootNode);
+		postOrder(rootNode); // 후위순회
 	}
 
 	public static void postOrder(Node node) {

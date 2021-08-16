@@ -9,7 +9,7 @@ import java.util.Queue;
 // 숨바꼭질
 /*
  * 노드마다 +1칸 자식, -1칸 자식, x2칸 자식을 계속 가지는 트리를 생성하여 BFS를 실행 
- * 시간복잡도: log3(100000)=O(1) 한 노드당 3배씩 추가되어서 최대 10만개까지 가니까...?
+ * 시간복잡도: log3(100000)=O(1) 깊이당 최대 3배씩 추가되어서 최대 10만개까지 가니까...?
  */
 public class Baekjoon_1697 {
 
@@ -34,7 +34,7 @@ public class Baekjoon_1697 {
 			while(--size>=0) {
 				int now = queue.poll();
 				for(int i=0; i<3; i++) { // -1, +1, x2 세 번 기록하기 위해
-					int next = 0;
+					int next = 0; // 다음으로 갈 인덱스
 					
 					if(i==0) { // 다음으로 갈 인덱스 셋 다 검색
 						next = now-1;
@@ -48,8 +48,8 @@ public class Baekjoon_1697 {
 						System.out.println(level);
 						return;
 					}
-					if(next>0 && next<arr.length && arr[next]==0) { // 다음칸이 범위안에 있고, 이미 기록된 곳이 아니면
-						arr[next] = level;
+					if(next>0 && next<arr.length && arr[next]==0) { // 다음칸 경계체크 && 이미 도착해본 곳이 아니면
+						arr[next] = level; // 그 위치에 몇번만에 갔는지 저장
 						queue.offer(next);
 					}
 				}
