@@ -43,7 +43,6 @@ public class Baekjoon_13904 {
 		for(int n : pQueue) {
 			result += n;
 		}
-//		System.out.println(Arrays.deepToString(hw));
 		System.out.println(result);
 	}
 	

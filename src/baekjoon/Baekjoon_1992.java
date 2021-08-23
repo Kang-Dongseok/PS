@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 // 쿼드트리
+/*
+ * 분할정복을 이용하여 큰 사각형을 재귀를 이용하여 사분면으로 나누어 해결했다.
+ * 시간복잡도: O(logN) N의 길이를 계속 2로 분할하여 해결하기 때문에
+ */
 public class Baekjoon_1992 {
 
 	static int N;
