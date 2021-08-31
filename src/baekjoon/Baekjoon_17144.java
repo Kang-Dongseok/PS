@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 // 미세먼지 안녕!
+/*
+ * 미세먼지가 확산될 양과 좌표를 새로운 배열에 저장 후 원래 방의 상태와 합침으로써 확산을 구현하였다.
+ * 시간복잡도: O(RC)...? 크게 고려하지 않았다.
+ */
 public class Baekjoon_17144 {
 
 	static int R,C,T;

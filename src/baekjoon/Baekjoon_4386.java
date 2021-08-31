@@ -9,6 +9,7 @@ import java.util.PriorityQueue;
 // 별자리 만들기
 /*
  * 1774번 문제와 거의 같은 유형이다. Kruskal 알고리즘으로 해결하였다.
+ * 시간 복잡도: O((N^2)*(log(N^2)))
  */
 public class Baekjoon_4386 {
 	

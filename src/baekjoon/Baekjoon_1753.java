@@ -7,6 +7,10 @@ import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
 // 최단경로
+/*
+ * 다익스트라 알고리즘을 이용해 해결.
+ * 시간복잡도 : O((E+V)logV)
+ */
 public class Baekjoon_1753 {
 	
 	static class Node{

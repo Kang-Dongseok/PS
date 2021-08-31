@@ -9,6 +9,7 @@ import java.util.PriorityQueue;
 /*
  * MST 문제이므로 Kruskal 또는 Prim 알고리즘으로 해결할 수 있다고 생각했다.
  * Kruskal로 시도해보았다.
+ * 시간 복잡도: O((N^2)*(log(N^2))), ElogE 인데 정점이 N개 이므로 간선은 대략 N^2개 이다.
  */
 public class Baekjoon_1774 {
 
