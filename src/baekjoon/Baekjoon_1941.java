@@ -8,6 +8,13 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 // 소문난 칠공주
+/*
+ * 조합 + bfs를 이용한 좌표들의 인접여부 판단으로 해결하였다.
+ * 25칸 중 7칸을 S가 4명 이상 포합되면서 뽑은 조합 => 7칸의 연결 유무를 판단 후 ok면 결과값 1 증가
+ * -느낀점
+ * ArrayList를 deep Copy 하는 법을 알게 되었다. ==> myCopy 메소드 참고
+ * 그리고 순열,조합 등 재귀함수 연습이 정말정말 많이 필요한 것 같다. 너무 실수를 많이한다. 때문에 푸는데 5시간 가까이 걸렸다...
+ */
 public class Baekjoon_1941 {
 
 	static class Student{

@@ -10,7 +10,8 @@ import java.util.StringTokenizer;
 // 게리맨더링
 /*
  * 편의상 선거구 A,B로 나눔
- * 
+ * 조합을 이용하여 A선거구 구역들을 뽑고, 구역이 연결되면 B선거구 나머지 구역들의 연결 유무를 확인한 후
+ * 이상이 없을 때 인구수 차이를 계산하는 방법으로 접근.
  */
 public class Baekjoon_17471 {
 

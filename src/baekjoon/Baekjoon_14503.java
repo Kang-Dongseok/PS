@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 // 로봇 청소기
 /*
- *
+ * 반시계 방향으로 돌면서 점검하고 청소안했으면 전진, 4방향 다 청소했으면 후진하는 방법으로 그리 어렵지 않게 풀었다.
  * 시간복잡도는 고려하지 않았다.
  */
 public class Baekjoon_14503 {
