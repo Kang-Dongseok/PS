@@ -7,6 +7,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 // 말이 되고픈 원숭이
+/*
+ * 단순한 탐색 문제가 아니기때문에 다시 한 번 꼭 풀어보기!
+ */
 public class Baekjoon_1600 {
 
 	static int K,H,W;
