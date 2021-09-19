@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-// 색종이 만들기
+// 치즈
 public class Baekjoon_2636 {
 
 	static int R,C,hour,cheeseLeftCnt;
