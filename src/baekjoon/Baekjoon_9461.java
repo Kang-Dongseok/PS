@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 // 파도반 수열
+/*
+ * 연산수가 많을 때 int가 아니라 long범위까지 가는지 확인하기!
+ */
 public class Baekjoon_9461 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
