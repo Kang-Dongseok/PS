@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 // 파이프 옮기기1
 /*
- * 
+ * 조금 어려운(?) 점화식을 구현하는 평범한 dp문제였던것 같다.
  */
 public class Baekjoon_17070 {
 
