@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 // 녹색 옷 입은 애가 젤다지?
 /*
- * dfs + memoization(dp?)
+ * dfs+다익스트라 알고리즘 활용
  */
 public class Baekjoon_4485 {
 	
