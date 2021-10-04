@@ -5,6 +5,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 // 마법사 상어와 블리자드
+/*
+ * 상어를 시작점으로 어떻게 토네이토 모양처럼 탐색할지 고민하다가
+ * 2차원 좌표들을 1차원 좌표로 바꾸어 1차원배열의 처음부터 끝까지 순회하는 방식으로 하였다.
+ * 구현해야할 것들이 많아서 약간 난이도가 높았던 문제인 것 같다.
+ */
 public class Baekjoon_21611 {
 
 	static int N,M,startR,startC,result;
