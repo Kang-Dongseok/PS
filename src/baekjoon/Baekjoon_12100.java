@@ -7,6 +7,10 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 // 2048(Easy)
+/*
+ * 한 번에 4방향으로 최대 5번이면 4^5=1024 이므로 경우의 수는 작다.
+ * 따라서 문제에서 요구하는대로 어떻게 숫자들을 합쳐서 움직일지만 잘 구현하면 된다.
+ */
 public class Baekjoon_12100 {
 	
 	static int N,result;

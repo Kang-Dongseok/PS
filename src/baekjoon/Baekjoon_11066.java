@@ -3,6 +3,13 @@ package baekjoon;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+// 파일 합치기
+/*
+ * 점화식을 찾는 것이 생각보다 어려웠다.
+ * dp[i][j]를 i번쨰부터 j번쨰까지를 합친 최소의 비용이라고 하면, 점화식은 다음과 같다.
+ * dp[i][j] = Math.min(dp[i][j], dp[i][k]+dp[k+1][j]+sum[j]-sum[i-1])
+ * 시간복잡도 : O(N^3)
+ */
 public class Baekjoon_11066 {
 
     public static void main(String[] args) throws Exception {
@@ -31,6 +38,12 @@ public class Baekjoon_11066 {
         		}
         	}
         	System.out.println(dp[1][K]);
+        	for(int[] ar : dp) {
+        		for(int a : ar) {
+        			System.out.print(a+"\t");
+        		}
+        		System.out.println();
+        	}
         }
 
     }
