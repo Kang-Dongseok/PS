@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 // 농장 관리
+/*
+ * dfs탐색을 하면서 더 깊은 depth일 때 boolean값을 리턴하며 현재 depth에서 산봉우리인지 판단하는 로직이 핵심인 것 같다.
+ */
 public class Baekjoon_1245 {
 
 	static int N,M;
