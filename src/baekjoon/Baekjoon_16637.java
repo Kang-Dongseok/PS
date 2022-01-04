@@ -8,6 +8,7 @@ import java.io.InputStreamReader;
 /*
  * 숫자를 앞에서부터 1개 혹은 2개먼저 연산한 결과를 차근차근 연산하면 된다.
  * 생각보다 문제가 너무 간단해서 골드3이라고 하기에는 쉬운 편이었다.
+ * dfs 방식을 사용하여 해결하였다.
  */
 public class Baekjoon_16637 {
 
@@ -26,7 +27,7 @@ public class Baekjoon_16637 {
 		}
 		
 		result=Integer.MIN_VALUE; // 최댓값 초기화
-		calc(1,sentence.charAt(0)-'0'); // 시작 시 첫 번째 수는 무조건 선택
+		calc(1,sentence.charAt(0)-'0'); // 시작 시 첫 번째 수는 무조건 선택, dfs
 		System.out.println(result);
 	}
 	
