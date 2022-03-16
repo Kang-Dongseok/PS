@@ -1,2 +1,1 @@
-# BOJ
-BOJ 문제풀이
+# Problem Solving 문제풀이
