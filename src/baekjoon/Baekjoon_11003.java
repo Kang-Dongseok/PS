@@ -3,8 +3,8 @@ package baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.LinkedList;
 
 // 최솟값 찾기
 /*
@@ -19,7 +19,7 @@ public class Baekjoon_11003 {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		Deque<int[]> deq = new LinkedList<int[]>(); // {해당숫자, 인덱스} 저장
+		Deque<int[]> deq = new ArrayDeque<int[]>(); // {해당숫자, 인덱스} 저장
 		StringBuilder sb = new StringBuilder();
 		String[] line = br.readLine().split(" ");
 		int N = Integer.parseInt(line[0]);
