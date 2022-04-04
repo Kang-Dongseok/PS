@@ -6,6 +6,9 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 // 마법사 상어와 파이어볼
+/*
+ * 질량,속도,방향을 합쳐서 저장하는 방법을 잘 구현해야 풀 수 있는 문제였다.
+ */
 public class Baekjoon_20056 {
 	
 	static class FireBall {

@@ -7,6 +7,10 @@ import java.util.LinkedList;
 import java.util.Queue;
  
 // 벽 부수고 이동하기
+/*
+ * 벽을 부쉈는지 아닌지를 체크하면서 동시에 방문체크를 하기 위해
+ * 3차원 boolean배열 3번째 인덱스를 벽을 부순 횟수의 상태를 체크하는데 사용한다.
+ */
 public class Baekjoon_2206 {
 
 	static char[][] map;
