@@ -6,8 +6,8 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
  
-// 벽 부수고 이동하기
-public class Baekjoon_2206 {
+// 벽 부수고 이동하기 2
+public class Baekjoon_14442 {
 
 	static char[][] map;
 	static boolean[][][] visited;
@@ -18,17 +18,20 @@ public class Baekjoon_2206 {
 		String[] str = br.readLine().split(" ");
 		int N = Integer.parseInt(str[0]);
 		int M = Integer.parseInt(str[1]);
+		int K = Integer.parseInt(str[2]);
 		map = new char[N][M];
-		visited = new boolean[N][M][2];
+		visited = new boolean[N][M][K+1];
 		for(int i=0; i<N; ++i) {
 			map[i] = br.readLine().toCharArray();
 		}
 		
 		Queue<int[]> q = new LinkedList<int[]>();
 		q.offer(new int[] {0,0,0});
+//		visited[0][0][0] = true;
 		
 		int answer = -1;
 		int depth = 0;
+		
 		while(!q.isEmpty()) {
 			int size = q.size();
 			depth++; // 이동거리
@@ -52,9 +55,9 @@ public class Baekjoon_2206 {
 					if(map[nr][nc]=='0') { // 다음칸이 벽 없으면
 						if(visited[nr][nc][0]) continue; // 방문체크
 						q.offer(new int[] {nr,nc,state});
-					}else if(map[nr][nc]=='1' && state==0) { // 다음칸 벽이고 이전에 벽 안부쉈으면
-						if(visited[nr][nc][1]) continue; // 방문체크
-						q.offer(new int[] {nr,nc,1}); // 상태를 벽 부순걸로 바꿈
+					}else if(map[nr][nc]=='1' && state<K) { // 다음칸 벽이고 K번 미만 벽을 부쉈으면
+						if(visited[nr][nc][state+1]) continue; // 이미 K번 부수면서 지나갔는지 방문체크
+						q.offer(new int[] {nr,nc,state+1}); // 벽 부수고 다음칸 진행
 					}
 				}
 			}
