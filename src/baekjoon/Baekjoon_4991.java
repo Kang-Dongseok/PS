@@ -8,6 +8,11 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 // 로봇 청소기
+/*
+ * bfs로 로봇과 모든 더러운 칸들사이의 거리를 계산하여 2차연 배열로 저장한 후
+ * next permutation을 오랜만에 사용하여 순열을 만든 후
+ * 순서에따라 청소하며 최솟값을 갱신하였다.
+ */
 public class Baekjoon_4991 {
 	
 	static int R,C;
