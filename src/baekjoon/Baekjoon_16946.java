@@ -7,6 +7,11 @@ import java.util.HashSet;
 import java.util.Set;
 
 // 벽 부수고 이동하기 4
+/*
+ * 0이 붙어있는 구역의 0 갯수를 센 후, 인접한 1에 0의 갯수를 더한다.
+ * 이 때 여러방향으로 인접해있으면 한번만 더해주는것이 중요하다.
+ * 마지막으로 1의 위치에 1을 더한다.
+ */
 public class Baekjoon_16946 {
 
 	static int N,M,cnt;
