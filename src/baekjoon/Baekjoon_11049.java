@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 // 행렬 곱셈 순서
+/*
+ * dp[i][j] = i번쨰 행렬부터 j번째 행렬까지 곱하는 최소 연산 횟수
+ */
 public class Baekjoon_11049 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {

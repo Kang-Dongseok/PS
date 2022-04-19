@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 // 연산자 끼워넣기
+/*
+ * 중복조합 문제이다.
+ * 무난하게 브루트포스로 가능한 모든 연산자의 경우를 고려하여 최대,최소값을 구하면 된다.
+ */
 public class Baekjoon_14888 {
 
 	static int N,min=Integer.MAX_VALUE,max=Integer.MIN_VALUE;

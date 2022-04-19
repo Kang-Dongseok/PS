@@ -6,6 +6,10 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 // 드래곤 커브
+/*
+ * 반시계방향으로 90도만큼 회전하여 기존의 모양의 거꾸로 순서대로 확장한다.
+ * 그 후 시작방향만 잘 설정해서 좌표에 잘 배치하면 된다.
+ */
 public class Baekjoon_15685 {
 
 	static int[][] dir = {{1,0},{0,-1},{-1,0},{0,1}};
@@ -45,11 +49,5 @@ public class Baekjoon_15685 {
 			}
 		}
 		System.out.println(answer);
-//		for(boolean[] ar : check) {
-//			for(boolean a : ar) {
-//				System.out.print(a+"\t");
-//			}
-//			System.out.println();
-//		}
 	}
 }
