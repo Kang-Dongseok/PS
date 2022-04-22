@@ -8,6 +8,11 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 // 연구소 3
+/*
+ * 조합을 이용하여 가능한 모든 경우의 수를 실행한다.
+ * 바이러스 확산 시 0으로 된 칸이 다 채워지면 2로 된 칸이 남아있어도 종료해야한다.
+ * 기존의 최적화 값보다 더 긴 시간 이동 시 가지치기를 이용하였다.
+ */
 public class Baekjoon_17142 {
 
 	static int N,M,size,emptyCnt,answer;
@@ -35,7 +40,6 @@ public class Baekjoon_17142 {
 				}
 			}
 		}
-//		emptyCnt = N*N - emptyCnt; // 벽을 제외한 나머지 칸의 수
 		size = pos.size();
 		answer = Integer.MAX_VALUE;
 		combination(0,0);
@@ -47,10 +51,6 @@ public class Baekjoon_17142 {
 	
 	public static void combination(int n, int idx) {
 		if(n==M) { // 위치 M개 선택했으면
-//			for(int a : comb) {
-//				System.out.print(a+" ");
-//			}
-//			System.out.println();
 			bfs();
 			return;
 		}
@@ -66,16 +66,13 @@ public class Baekjoon_17142 {
 		boolean[][] visited = new boolean[N][N];
 		for(int idx : comb) {
 			int[] cur = pos.get(idx);
-//			int r = cur[0];
-//			int c = cur[1];
-//			visited[r][c]=true;
 			q.add(cur);
 		}
 		int dist = -1;
 		int cnt = 0; // 0을 채우는 갯수
 		while(!q.isEmpty()) {
 			dist++; // 거리증가
-			if(dist>=answer) break; // 기존보다 더 멀리가면 더 이상 비교 X
+			if(dist>=answer) break; // 가지치기, 기존보다 더 멀리가면 더 이상 비교 X
 			int size = q.size();
 			while(size-->0) {
 				int[] cur = q.poll();
@@ -98,15 +95,5 @@ public class Baekjoon_17142 {
 				}
 			}
 		}
-//		if(cnt==emptyCnt) { // 모든 칸을 다 채우면
-//			answer = dist;
-//			if(answer==5) {
-//				for(int a : comb) {
-//					System.out.print(a+" ");
-//				}
-//			}
-//		}else { // 다 못 채우면 종료
-//			return;
-//		}
 	}
 }
