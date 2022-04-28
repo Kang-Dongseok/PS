@@ -36,15 +36,9 @@ public class Baekjoon_20061 {
 			int y = Integer.parseInt(str[2]);
 			goBlue(t,x);
 			goGreen(t,y);
-//			System.out.println(i);
-//			System.out.println("before");
-//			print();
 			removeLine(); // 파랑&초록 줄 제거,블럭이동,점수 증가
 			removeSpecialLine();
-//			System.out.println("after");
-//			print();
 		}
-//		print();
 		for(int i=2; i<6; ++i) { // 연한칸은 블럭 없으므로 나머지만 계산
 			for(int j=0; j<4; ++j) {
 				if(blue[i].get(0)[j]) leftCnt++;
@@ -131,7 +125,6 @@ public class Baekjoon_20061 {
 				for(int j=i; j>0; --j) {
 					blue[j].clear();
 					blue[j].add(blue[j-1].get(0));
-//					blue[j]=blue[j-1]; // 그 줄을 지우고 한칸씩 이동
 				}
 				blue[0] = new ArrayList<boolean[]>();
 				blue[0].add(new boolean[] {false,false,false,false}); // 제일 앞에 새로운줄 생성
@@ -185,27 +178,4 @@ public class Baekjoon_20061 {
 			}
 		}
 	}
-//	public static void print() {
-//		for(int i=0; i<4; ++i) {
-//			for(int j=0; j<6; ++j) {
-//				if(blue[j].get(0)[i]) {
-//					System.out.print(1+" ");
-//				}else {
-//					System.out.print(0+" ");
-//				}
-//			}
-//			System.out.println();
-//		}
-//		System.out.println();
-//		for(int j=0; j<6; ++j) {
-//			for(boolean a : green[j].get(0)) {
-//				if(a) {
-//					System.out.print(1+" ");
-//				}else {
-//					System.out.print(0+" ");
-//				}
-//			}
-//			System.out.println();
-//		}
-//	}
 }

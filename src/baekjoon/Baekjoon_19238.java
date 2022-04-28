@@ -107,16 +107,14 @@ public class Baekjoon_19238 {
 				}
 			} // end while
 			if(personR!=100) { // 한명이라도 사람을 발견하면 그만 탐색
-				break;
+				carR = personR; // 차 위치 이동
+				carC = personC;
+				fuel -= dist; // 연료 소모
+				map[personR][personC] = 0; // 사람은 빈칸으로 변경
+				return personNum;
 			}
 			dist++; // 거리 증가
 		} // end while
-		if(personR!=100) { // 사람 발견하면
-			carR = personR; // 차 위치 이동
-			carC = personC;
-			fuel -= dist; // 연료 소모
-			map[personR][personC] = 0; // 사람은 빈칸으로 변경
-		}
 		return personNum;
 	}
 	

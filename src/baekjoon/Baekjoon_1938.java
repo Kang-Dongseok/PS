@@ -7,6 +7,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 // 통나무 옮기기
+/*
+ * 상태를 가로,세로 2가지로 나눠서 구분하여 bfs를 실행하면 된다.
+ */
 public class Baekjoon_1938 {
 
 	static int N;
