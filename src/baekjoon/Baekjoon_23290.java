@@ -8,6 +8,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 // 마법사 상어와 복제
+/*
+ * 미해결
+ */
 public class Baekjoon_23290 {
 
 	static int M,S,R,C;
