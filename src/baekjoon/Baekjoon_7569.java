@@ -6,6 +6,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 // 토마토
+/*
+ * 무난한 BFS이지만, 4방탐색 + Z축 위아래 총 6방향 탐색을 하면 된다.
+ */
 public class Baekjoon_7569 {
 
 	static int[][] dir = {{-1,0},{0,1},{1,0},{0,-1}};
