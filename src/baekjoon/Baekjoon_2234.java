@@ -68,12 +68,6 @@ public class Baekjoon_2234 {
 				}
 			}
 		}
-		for(int[] ar : map) {
-			for(int a : ar) {
-				System.out.print(a+" ");
-			}
-			System.out.println();
-		}
 		System.out.println(cnt);
 		System.out.println(max);
 		System.out.println(unionMax);
