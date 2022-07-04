@@ -1,0 +1,15 @@
+package baekjoon;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+// 그대로 출력하기
+public class Baekjoon_11718 {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int N = Integer.parseInt(br.readLine());
+		System.out.println((int)(N*0.78)+" "+(int)(N*0.956));
+	}
+}
