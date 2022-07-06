@@ -5,6 +5,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 // 경찰차
+/*
+ * 구글링하여 해결하였다.
+ * dp[i][j] = 1번차가 i번째, 2번차가 j번째 사건위치에 도달했을 때, 마지막까지 해결하는 최솟값이다.
+ * 즉 dp[0][0]을 구하기위해 dp[0][0]에서부터 재귀 방식으로 Top-Down 방식으로 해결한다.
+ * dp배열을 어떤식으로 설정하는지 자체가 상당히 어려웠다.
+ */
 public class Baekjoon_2618 {
 
 	static int N,W;
