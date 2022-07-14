@@ -8,6 +8,12 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 // 보석 도둑
+/*
+ * 1. 보석을 무게 오름차순, 무게가 같으면 가격 내림차순으로 정렬
+ * 2. 가방을 무게 오름차순 정렬
+ * 3. 가방 하나당 가능한 모든 보석들을 pq에 가격만 내림차순으로 삽입
+ * 4. 가방 하나당 pq에 보석의 가격이 존재하면 poll을 하여 가장 높은 가격을 정답에 더함.(greedy 방식)
+ */
 public class Baekjoon_1202 {
 
 	static class Jewlry implements Comparable<Jewlry> {
