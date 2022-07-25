@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 
 // 치킨댄스를 추는 곰곰이를 본 임스
 public class Baekjoon_25191 {
-
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(br.readLine());
